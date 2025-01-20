@@ -9,6 +9,7 @@ const LongCard = () => {
         src={longProp}
         alt="popularProps"
         className="h-full w-full object-cover"
+        loading="lazy"
       />
 
       {/* Gradient Overlay */}

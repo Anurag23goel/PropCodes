@@ -25,15 +25,17 @@ const HomePage = () => {
         </div>
 
         {/* Search Bar - Centered and Overlapping */}
-        <div className="mt-4 flex items-center justify-center lg:mt-0 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:translate-y-[50px] lg:w-fit lg:max-w-fit z-10">
-          <div className="flex items-center justify-center bg-gray-100 lg:border shadow-md rounded-lg pb-2 px-3">
-            <Searchbar />
-          </div>
+        <div className="
+        mt-4 w-3/4 sm:mt-0 flex items-center justify-center  -black pt-2 pb-3
+        sm:absolute sm:top-[60%] sm:left-1/2  sm:transform translate-x-[17%] -translate-y-1/2 md:top-[50%] md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2
+        lg:w-fit lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:translate-y-[50px] lg:max-w-fit z-10 bg-gray-100 lg: shadow-md rounded-lg px-3
+        ">
+          <Searchbar />
         </div>
       </div>
 
       {/* Popular City Section */}
-      <div className="w-full flex justify-center lg:mb-2 mt-6 lg:mt-20">
+      <div className="w-full flex justify-center md:mb-4 md:mt-24 ">
         <PopularCity />
       </div>
 
@@ -42,7 +44,7 @@ const HomePage = () => {
         <h1 className="text-3xl lg:text-[40px] lg:pl-5 pl-2 lg:mb-6 font-semibold">
           Featured Properties
         </h1>
-        <div className="w-full flex flex-wrap items-center justify-center gap-6 lg:gap-10 mt-4">
+        <div className="w-fit md:flex md:flex-wrap md:items-center md:justify-center gap-6 lg:gap-10 mt-4  -black">
           {[...Array(8)].map((_, index) => (
             <PropertyCard key={index} />
           ))}
@@ -50,7 +52,7 @@ const HomePage = () => {
       </div>
 
       {/* View All Button */}
-      <div className="my-6">
+      <div className="mt-6">
         <button className="px-6 py-2 text-md lg:text-xl rounded-full bg-blue-950 text-gray-100">
           View All
         </button>
@@ -63,27 +65,33 @@ const HomePage = () => {
         </h1>
 
         {/* Cards Section */}
-        <div className="flex flex-col justify-center lg:flex-row lg:justify-between gap-3 items-center p-3 lg:py-3 lg:px-20 border">
-          {/* Vertical Card */}
-          <div>
-            <Card2 height="400px" width="300px" />
+        <div className="flex flex-col md:flex-row justify-center lg:flex-row lg:justify-center gap-6 items-center p-3 lg:py-3 lg:px-20">
+          {/* Cards Section 1 */}
+          <div className=" flex gap-5">
+            <div className="hidden md:flex">
+              {/* Vertical Card */}
+              <Card2 />
+            </div>
+
+            {/* Horizontal Cards */}
+            <div className="flex flex-col gap-3 items-center justify-evenly">
+              <Card2 />
+              <Card2 />
+            </div>
           </div>
 
-          {/* Horizontal Cards */}
-          <div className="flex flex-col gap-3 items-center justify-evenly">
-            <Card2 height="190px" width="320px" />
-            <Card2 height="190px" width="320px" />
-          </div>
+          {/* Cards Section 2 */}
+          <div className=" gap-5 flex">
+            <div className="hidden md:flex">
+              {/* Vertical Card */}
+              <Card2 />
+            </div>
 
-          {/* Vertical Card */}
-          <div>
-            <Card2 height="400px" width="270px" />
-          </div>
-
-          {/* Horizontal Cards */}
-          <div className="flex flex-col gap-3 items-center justify-evenly">
-            <Card2 height="190px" width="320px" />
-            <Card2 height="190px" width="320px" />
+            {/* Horizontal Cards */}
+            <div className="flex flex-col gap-3 items-center justify-evenly">
+              <Card2 />
+              <Card2 />
+            </div>
           </div>
         </div>
       </div>
@@ -93,14 +101,14 @@ const HomePage = () => {
         <h1 className="text-lg lg:text-[40px] pl-5 font-semibold">
           Popular Properties
         </h1>
-        <div className="flex flex-col py-3 px-10 w-full mt-5">
+        <div className="flex flex-col py-3 px-10 w-11/12 mx-auto md:mt-5">
           <div className="flex items-center justify-center lg:justify-start lg:flex-row flex-wrap gap-3">
             {cityList.map((city, index) => (
               <button
                 key={index}
                 className={`${
                   isActive === city ? "bg-blue-950 text-white" : "bg-gray-200"
-                } px-6 py-2 rounded-full text-lg lg:text-xl`}
+                } px-6 py-2 rounded-full text-lg lg:text-lg`}
                 onClick={() => setIsActive(city)}
               >
                 {city}
@@ -124,7 +132,7 @@ const HomePage = () => {
         <h1 className="text-lg lg:text-[40px] pl-5 font-semibold">
           Latest Properties
         </h1>
-        <div className="w-full mx-auto mt-4 py-3 px-10">
+        <div className="w-11/12 mx-auto mt-4 py-3 px-10">
           <CarouselPopularProperties />
         </div>
       </div>

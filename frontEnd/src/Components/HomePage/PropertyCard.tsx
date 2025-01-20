@@ -4,12 +4,13 @@ import exampleProp from "../../assets/exampleProp.jpeg";
 
 const PropertyCard = () => {
   return (
-    <div className="lg:max-w-[300px] w-fit rounded-2xl border border-gray-200 shadow-3xl">
+    <div className="lg:max-w-[300px] w-full sm:w-[48%] rounded-2xl border border-gray-200 shadow-3xl">
       <div className="relative">
         <img
           src={exampleProp}
           alt="Property"
           className="w-full h-48 object-cover"
+          loading="lazy"
         />
         <div className="absolute top-2 left-2 bg-green-600 text-white text-sm px-3 py-1 rounded">
           ₹ 75,000 / Night

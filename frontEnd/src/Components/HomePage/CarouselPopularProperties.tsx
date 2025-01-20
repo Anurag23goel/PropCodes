@@ -11,7 +11,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 const CarouselPopularProperties = () => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full lg:w-full flex justify-center">
       <Carousel
         className="overflow-hidden"
         plugins={[
@@ -24,7 +24,7 @@ const CarouselPopularProperties = () => {
           {Array.from({ length: 12 }).map((_, index) => (
             <CarouselItem
               key={index}
-              className="flex-shrink-0 basis-1/1 md:basis-1/3 lg:basis-1/6"
+              className="flex-shrink-0 basis-1/1 md:basis-1/3 lg:basis-1/5"
             >
               <LongCard />
             </CarouselItem>
