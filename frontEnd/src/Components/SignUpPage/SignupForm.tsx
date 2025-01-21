@@ -8,123 +8,124 @@ const SignupForm: React.FC = () => {
   const cities: string[] = ["Gurugram", "Delhi", "Bangalore", "Mumbai", "Pune"];
 
   return (
-    <div className="min-w-fit max-h-full bg-white rounded-3xl shadow-lg py-4 px-6">
+    <div className="max-w-full bg-white rounded-3xl shadow-lg px-10 py-16 mx-auto border border-black lg:min-w-full">
       {/* Header Section */}
-      <h1 className="text-3xl font-semibold text-center mb:1 lg:mb-2">Sign Up</h1>
-      <p className="text-gray-600 text-center mb-2 lg:mb-6">
+      <h1 className="text-3xl font-bold text-center mb-4">Sign Up</h1>
+      <p className="text-gray-600 text-center mb-6 text-sm leading-tight">
         Welcome to Propcodes – Let’s create your account
       </p>
 
       {/* Form */}
-      <form className="grid grid-cols-1 sm:grid-cols-2 gap-2 lg:gap- px-4">
+      <form className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         {/* Name */}
-        <div className="flex flex-col gap-2 sm:col-span-2">
-          <label htmlFor="name" className="flex items-center gap-2">
-            <FiUser className="text-xl " />
-            <span className="text-md font-medium text-black">Name</span>
+        <div className="flex flex-col gap-1 sm:col-span-2">
+          <label htmlFor="name" className="text-sm  text-gray-700">
+            <FiUser className="inline-block mr-2 text-gray-500" />
+            Name
           </label>
           <input
             type="text"
             id="name"
             name="name"
-            className="border border-gray-300 rounded-full px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full"
+            className="border border-gray-300 rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none w-full"
             placeholder="Enter Your Name"
           />
         </div>
 
         {/* Mobile Number */}
-        <div className="flex flex-col gap-2">
-          <label htmlFor="mobileNumber" className="flex items-center gap-2">
-            <IoCallOutline className="text-xl text-black" />
-            <span className="text-md font-medium text-black">
-              Mobile Number
-            </span>
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="mobileNumber"
+            className="text-sm text-gray-700"
+          >
+            <IoCallOutline className="inline-block mr-2 text-gray-500" />
+            Mobile Number
           </label>
           <input
             type="text"
             id="mobileNumber"
             name="mobileNumber"
-            className="border border-gray-300 rounded-full px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full"
+            className="border border-gray-300 rounded-full px-2 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none w-full"
             placeholder="Enter Your Mobile Number"
           />
         </div>
 
         {/* Employee ID */}
-        <div className="flex flex-col gap-2">
-          <label htmlFor="employeeId" className="flex items-center gap-2">
-            <MdOutlineEmail className="text-xl text-black" />
-            <span className=" flex text-md font-medium text-black">
-              Employee ID (Optional)
-            </span>
+        <div className="flex flex-col gap-1">
+          <label
+            htmlFor="employeeId"
+            className="text-sm  text-gray-700"
+          >
+            <MdOutlineEmail className="inline-block mr-2 text-gray-500" />
+            Employee ID (Optional)
           </label>
           <input
             type="text"
             id="employeeId"
             name="employeeId"
-            className="border border-gray-300 rounded-full px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full"
+            className="border border-gray-300 rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none w-full"
             placeholder="Enter Your Employee ID"
           />
         </div>
 
         {/* Email */}
-        <div className="flex flex-col sm:col-span-2 gap-2">
-          <label htmlFor="email" className="flex items-center gap-2">
-            <MdOutlineEmail className="text-xl text-black" />
-            <span className="text-md font-medium text-black">Email</span>
+        <div className="flex flex-col gap-1 sm:col-span-2">
+          <label htmlFor="email" className="text-sm  text-gray-700">
+            <MdOutlineEmail className="inline-block mr-2 text-gray-500" />
+            Email
           </label>
           <input
             type="email"
             id="email"
             name="email"
-            className="border border-gray-300 rounded-full px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full"
+            className="border border-gray-300 rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none w-full"
             placeholder="Enter Your Email ID"
           />
         </div>
 
         {/* Password */}
-        <div className="flex flex-col sm:col-span-2 gap-2">
-          <label htmlFor="password" className="flex items-center gap-2">
-            <CiLock className="text-xl text-black" />
-            <span className="text-md font-medium text-black">Password</span>
+        <div className="flex flex-col gap-1 sm:col-span-2">
+          <label
+            htmlFor="password"
+            className="text-sm  text-gray-700"
+          >
+            <CiLock className="inline-block mr-2 text-gray-500" />
+            Password
           </label>
           <input
             type="password"
             id="password"
             name="password"
-            className="border border-gray-300 rounded-full px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full"
+            className="border border-gray-300 rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none w-full"
             placeholder="Enter Your Password"
           />
         </div>
 
         {/* Select Role */}
-        <div className="flex flex-col gap-2">
-          <label htmlFor="role" className="flex items-center gap-2">
-            <FiUser className="text-xl text-black" />
-            <span className="text-md font-medium text-black">
-              Select your Role
-            </span>
+        <div className="flex flex-col gap-1">
+          <label htmlFor="role" className="text-sm  text-gray-700">
+            <FiUser className="inline-block mr-2 text-gray-500" />
+            Select your Role
           </label>
           <input
             type="text"
             id="role"
             name="role"
-            className="border border-gray-300 rounded-full px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full"
+            className="border border-gray-300 rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none w-full"
             placeholder="Enter Your Role"
           />
         </div>
 
         {/* Select City */}
-        <div className="flex flex-col gap-2">
-          <label htmlFor="city" className="flex items-center gap-2">
-            <IoLocationOutline className="text-xl text-black" />
-            <span className="text-md font-medium text-black">
-              Select City
-            </span>
+        <div className="flex flex-col gap-1">
+          <label htmlFor="city" className="text-sm  text-gray-700">
+            <IoLocationOutline className="inline-block mr-2 text-gray-500" />
+            Select City
           </label>
           <select
             id="city"
             name="city"
-            className="border border-gray-300 rounded-full px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 w-full"
+            className="border border-gray-300 rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none w-full"
           >
             {cities.map((city, index) => (
               <option key={index} value={city}>
@@ -135,18 +136,18 @@ const SignupForm: React.FC = () => {
         </div>
 
         {/* Submit Button */}
-        <div className="sm:col-span-2 gap-2 lg:mt-4">
+        <div className="sm:col-span-2">
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white text-md font-medium py-2 px-4 rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full bg-blue-500 text-white text-md  py-2 rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Sign Up
           </button>
         </div>
 
         {/* Footer */}
-        <div className="sm:col-span-2 text-center">
-          <p className="text-md text-gray-600 lg:mt-4">
+        <div className="sm:col-span-2 text-center mt-4">
+          <p className="text-sm text-gray-600">
             Already have an account?{" "}
             <a href="#" className="text-blue-500 underline">
               Sign in
